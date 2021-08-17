@@ -1,0 +1,47 @@
+To deploy Flask app on herkou
+
+1)Create account on heroku and Github
+2) Download Git and heroku cli on pc
+
+
+1) Open anaconda prompt
+2) Create Environment to run flask application
+   To create env
+
+   conda create -n Flask_Heroku python==3.6
+
+   conda activate Flask_Heroku
+
+select interpreter in pycharm project.
+
+to installl flsk library cmd is given
+pip install flask
+
+
+
+
+>pip freeze>requirements.txt
+>pip install gunicorn
+>pip freeze>requirements.txt
+
+create a empty "Procfile"
+web: gunicorn apponheroku:app
+
+----link github repo
+
+echo "# apponheroku" >> README.md
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin <add url>
+git push -u origin main
+
+Execute below command
+
+heroku login -i
+
+heroku git:clone -a apponheroku123
+git push heroku main
